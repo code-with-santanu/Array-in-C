@@ -1,7 +1,7 @@
 void Swap(int arr[], int left, int right)
 {
-    int i;
-    i = arr[left];
+    int temp;
+    temp = arr[left];
     arr[left] = arr[right];
-    arr[right] = i;
+    arr[right] = temp;
 }

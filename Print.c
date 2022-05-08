@@ -5,5 +5,5 @@ void Print(int arr[], int length)
     {
         printf("\t%d", arr[k]);
     }
-    printf("\b");
+    printf("\n");
 }

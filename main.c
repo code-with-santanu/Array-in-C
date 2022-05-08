@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "InsertInArray.c"
 #include "Print.c"
+#include "Reverse.c"
 #include "SearchFirstOccurrence.c"
 #include "DeleteElementAtPosition.c"
-#include "Reverse.c"
 #include "SearchAndDelete.c"
 
 int main()
@@ -12,7 +12,7 @@ int main()
     length = InsertInArray(arr);
     Print(arr, length);
 
-    // reverse the array
+    // Reverse the array
     printf("\nPress 1 to reverse the array or to avoid this press any other key :");
     scanf("%d", &rev);
     if (rev == 1)
@@ -21,6 +21,7 @@ int main()
         Print(arr, length);
     }
 
+    // Searching and Deleting element from the array
     printf("\nPress 1 to delete any element or to avoid this press any other key :");
     scanf("%d", &del);
     if (del == 1)
@@ -31,7 +32,6 @@ int main()
         printf("\nEnter choice:- \npress 1 for 1st ocurrence \npress 2 for 2nd ocurrence \npress 3 for all ocurrence\n: ");
         scanf("\t\t\t\t\t%d", &oc);
 
-        // searching and deleting element from the array
         SearchAndDelete(arr, s, length, oc);
 
         length = DeleteElementAtPosition(arr, NewPos, length);
@@ -39,4 +39,3 @@ int main()
     }
 
     return 0;
-}
