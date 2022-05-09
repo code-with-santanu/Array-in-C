@@ -2,10 +2,25 @@
   others to the right side of the choosen no   */
 
 #include <stdio.h>
-#include "InsertInArray.c"
-#include "Print.c"
-#include "SearchFirstOccurrence.c"
-#include "Swap.c"
+#include "MyLibrary.h"
+
+void ArrayModification(int arr[], int, int);
+
+int main()
+{
+    int arr[100000], length, choice, tempPos;
+    int L, R;
+    length = InsertInArray(arr);
+    Print(arr, length);
+
+    printf("\nChoose a no from the array: ");
+    scanf("%d", &choice);
+
+    ArrayModification(arr, choice, length);
+    Print(arr, length);
+
+    return 0;
+}
 
 void ArrayModification(int arr[], int choice, int length)
 {
@@ -27,20 +42,4 @@ void ArrayModification(int arr[], int choice, int length)
             Swap(arr, left, right);
         }
     }
-}
-
-int main()
-{
-    int arr[100000], length, choice, tempPos;
-    int L, R;
-    length = InsertInArray(arr);
-    Print(arr, length);
-
-    printf("\nChoose a no from the array: ");
-    scanf("%d", &choice);
-
-    ArrayModification(arr, choice, length);
-    Print(arr, length);
-
-    return 0;
 }

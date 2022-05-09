@@ -1,12 +1,9 @@
 #include <stdio.h>
-#include "InsertInArray.c"
-#include "Print.c"
-#include "BubbleSort.c"
-#include "Swap.c"
+#include "MyLibrary.h"
 
 int i, j;
 
-int Merge(int, int, int, int, int);
+int Merge(int a[], int, int b[], int, int arr[]);
 int EliminateDuplicate(int, int, int);
 
 int main()
@@ -25,9 +22,9 @@ int main()
     Sort(arr, length);
     Print(arr, length);
 
-    //Deleting Duplicate Elements...
-    length= EliminateDuplicate(arr, length, d);
-    Print(d,length);
+    // Deleting Duplicate Elements...
+    length = EliminateDuplicate(arr, length, d);
+    Print(d, length);
 
     return 0;
 }

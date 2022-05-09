@@ -1,9 +1,5 @@
 #include <stdio.h>
-#include "InsertInArray.c"
-#include "Print.c"
-#include "Reverse.c"
-#include "SearchFirstOccurrence.c"
-#include "DeleteElementAtPosition.c"
+#include "MyLibrary.h"
 #include "SearchAndDelete.c"
 
 int main()
@@ -39,3 +35,4 @@ int main()
     }
 
     return 0;
+}
