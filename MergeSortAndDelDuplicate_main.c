@@ -4,7 +4,7 @@
 int i, j;
 
 int Merge(int a[], int, int b[], int, int arr[]);
-int EliminateDuplicate(int, int, int);
+int EliminateDuplicate(int arr[], int, int d[]);
 
 int main()
 {
@@ -57,5 +57,5 @@ int EliminateDuplicate(int arr[], int length, int d[])
             d[t] = arr[i];
         }
     }
-    return (t + 1);
+    return t;
 }

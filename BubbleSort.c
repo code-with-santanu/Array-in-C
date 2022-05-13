@@ -8,7 +8,7 @@ int Sort(int arr[], int length)
         {
             if (arr[i] > arr[j])
             {
-                Swap(arr[1000], i, j);
+                Swap(arr, i, j);
             }
         }
     }
