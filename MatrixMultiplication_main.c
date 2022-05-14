@@ -8,11 +8,11 @@ int main()
     int a[20][20], b[20][20], row1, row2, col1, col2, c[20][20], returnvalue;
     printf("\nEnter the rows and columns of 1st matrix: ");
     scanf("%d%d", &row1, &col1);
-    Insert(a, row1, col1);
+    InsertIn2DArray(a, row1, col1);
 
     printf("\nEnter the rows and columns of 2nd matrix: ");
     scanf("%d%d", &row2, &col2);
-    Insert(b, row2, col2);
+    InsertIn2DArray(b, row2, col2);
 
     Print2DArray(a, row1, col1);
     Print2DArray(b, row2, col2);

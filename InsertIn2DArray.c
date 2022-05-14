@@ -1,4 +1,4 @@
-void Insert(int array[20][20], int row, int col)
+void InsertIn2DArray(int array[20][20], int row, int col)
 {
     int i, j;
     printf("\nEnter the elements: ");
