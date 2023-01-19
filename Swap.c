@@ -1,4 +1,4 @@
-void Swap(int arr[], int left, int right)
+void Swap(int *arr, int left, int right)
 {
     int temp;
     temp = arr[left];
