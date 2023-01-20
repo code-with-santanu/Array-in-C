@@ -1,22 +1,27 @@
 #include <stdio.h>
-#include "MyLibrary.h"
+#include<stdlib.h>
+#include "ArrayLibrary.h"
 
-void IncreaseValue(int arr[], int);
+void IncreaseValue(int *arr, int);
 
 int main()
 {
-    int arr[10], length;
-    InsertInArray(arr);
-    length = InsertInArray(arr);
-    Print(arr, length);
+    int *arr, length;
+
+    printf("\nEnter the length the array: ");
+    scanf("%d", &length);
+
+    arr = (int *)malloc(sizeof(int) * length);
+    InsertIn1DArray(arr,length);
+    Print1DArray(arr, length);
 
     IncreaseValue(arr, length);
-    Print(arr, length);
+    Print1DArray(arr, length);
 
     return 0;
 }
 
-void IncreaseValue(int arr[], int length)
+void IncreaseValue(int *arr, int length)
 {
     int i;
     for (i = 0; i < length; i++)
