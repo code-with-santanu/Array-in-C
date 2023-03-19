@@ -3,7 +3,8 @@
 
 int max, min,max1,min1;
 int a[100];
-void maxmin(int i, int j)
+
+void MinMax(int i, int j)
 {
     int  mid;
     if(i==j)
@@ -24,21 +25,21 @@ void maxmin(int i, int j)
     else
     {
         mid = (i+j)/2;
-        maxmin (0,mid);
+        MinMax (0,mid);
         if(max>max1)
             max1=max;
         if(min<min1)
             min1 = min;
         
-        
-        maxmin(mid+1,j);
+
+        MinMax(mid+1,j);
         if(max>max1)
             max1=max;
         if(min<min1)
             min1 = min;
     }
 }
-void main()
+int main()
 {
     int i,n;
     printf("Enter the no. of elements: ");
@@ -55,8 +56,16 @@ void main()
     }
     min1 = max1 = a[0];
 
-    maxmin(0, n-1);
+    MinMax(0, n-1);
+
+    //Required when no of ele is 2
+    if(max>max1)
+            max1=max;
+    if(min<min1)
+        min1 = min;
     
-    printf("\n\nThe maximum value is: %d", max1);
-    printf("\nThe minmium value is: %d\n", min1);
+    printf("\nThe maximum value is: %d", max1);
+    printf("\nThe minmium value is: %d", min1);
+
+    return 0;
 }
