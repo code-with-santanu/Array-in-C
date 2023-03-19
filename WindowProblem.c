@@ -12,9 +12,6 @@ int Window(int arr[],int length, int key)
     i = 0;
     while(i+key-1 < length)
     {
-        j = i + key - 1;
-        
-        
         dif = arr[i+key-1] - arr[i];
 
         if (dif < MinDiff)
