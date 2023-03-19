@@ -29,16 +29,13 @@ void maxmin(int i, int j)
             max1=max;
         if(min<min1)
             min1 = min;
-        printf("\nMin= %d", min1);
-        printf("\nMax= %d", max1);
+        
+        
         maxmin(mid+1,j);
         if(max>max1)
             max1=max;
         if(min<min1)
             min1 = min;
-
-        printf("\nMin= %d", min1);
-        printf("\nMax= %d", max1);
     }
 }
 void main()
