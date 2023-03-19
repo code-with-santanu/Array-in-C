@@ -4,7 +4,7 @@
 int max, min,max1,min1;
 int a[100];
 
-void MinMax(int i, int j)
+void MinMax(int a[], int i, int j)
 {
     int  mid;
     if(i==j)
@@ -25,14 +25,14 @@ void MinMax(int i, int j)
     else
     {
         mid = (i+j)/2;
-        MinMax (0,mid);
+        MinMax (a, i, mid);
         if(max>max1)
             max1=max;
         if(min<min1)
             min1 = min;
         
 
-        MinMax(mid+1,j);
+        MinMax(a, mid+1, j);
         if(max>max1)
             max1=max;
         if(min<min1)
@@ -56,7 +56,7 @@ int main()
     }
     min1 = max1 = a[0];
 
-    MinMax(0, n-1);
+    MinMax(a, 0, n-1);
 
     //Required when no of ele is 2
     if(max>max1)
