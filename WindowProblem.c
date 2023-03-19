@@ -6,7 +6,7 @@
 
 int Window(int arr[],int length, int key)
 {
-    int MinDiff, i, j, dif;
+    int MinDiff, i, dif;
 
     MinDiff = arr[length - 1] - arr[0];
     i = 0;
