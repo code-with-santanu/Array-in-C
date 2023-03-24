@@ -46,6 +46,12 @@ int BinarySearch(int *arr,int size,int targetNo)
     }
 
     return -1;
+
+    //********If value not in list, where the value should be : *********
+    // if(targetNo>arr[mid])
+    //     return mid+1;
+    // else
+    //     return mid;
 }
 
 
@@ -86,4 +92,10 @@ int InterpolationSearch(int *arr,int size, int targetNo)
     }
     
     return -1;
+
+    //********If value not in list, where the value should be : *********
+    // if(targetNo>arr[mid])
+    //     return mid+1;
+    // else
+    //     return mid;
 }
