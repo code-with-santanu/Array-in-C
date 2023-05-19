@@ -29,10 +29,10 @@ void SelectionSort(int *arr, int length)
         {
             if(arr[j] < arr[indexOfMin])
             {
-                indexOfMin=j;            
+                indexOfMin=j;
             }
         }
-        Swap(arr,i,indexOfMin);        
+        Swap(arr,i,indexOfMin);
     }
 }
 
@@ -59,7 +59,7 @@ void InsertionSort(int *arr,int length)
 void MergeSortedArray(int *arr, int low, int mid, int high)
 {
     int i, j, k=0;
-    int size = low + high + 1;
+    int size = high + 1 - low;
     int *b = malloc(sizeof(int) * size);
 
     i = low;
@@ -94,7 +94,7 @@ void MergeSortedArray(int *arr, int low, int mid, int high)
         j++;
         k++;
     }
-    
+
     //copy the sorted data to the original array
     for (i = low; i <= high;i++)
     {
